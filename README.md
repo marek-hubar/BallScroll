@@ -41,8 +41,19 @@ front.
 
 Requires macOS 14 or later.
 
+### Download
+
+1. Download the latest `BallScroll-<version>.dmg` from
+   [Releases](https://github.com/marek-hubar/BallScroll/releases/latest).
+2. Open it and drag BallScroll into Applications.
+3. Open BallScroll from Applications. The app is not notarized, so macOS
+   blocks the first launch. Open System Settings > Privacy & Security and
+   choose **Open Anyway**.
+
+### Build from source
+
 ```sh
-git clone <this repository>
+git clone https://github.com/marek-hubar/BallScroll.git
 cd BallScroll
 Scripts/build-app.sh
 cp -R build/BallScroll.app /Applications/
@@ -52,14 +63,12 @@ open /Applications/BallScroll.app
 Building needs only the Xcode Command Line Tools (`xcode-select --install`),
 not Xcode itself.
 
+### First launch
+
 On first launch macOS asks for **Accessibility** access. BallScroll needs it to
 watch the Trigger Button and send scroll events. Switch it on in System
 Settings > Privacy & Security > Accessibility and BallScroll starts working
 right away.
-
-If you downloaded a prebuilt app instead of building it: the app is not
-notarized, so macOS blocks the first launch. Open System Settings > Privacy &
-Security and choose **Open Anyway**.
 
 Turn off any other tool that does the same job (a Hammerspoon script, the
 gesture button in another mouse utility) before using BallScroll, or the two
