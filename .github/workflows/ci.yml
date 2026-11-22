@@ -13,7 +13,7 @@ jobs:
   test:
     runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Run tests
         run: Scripts/test.sh
 
@@ -24,7 +24,7 @@ jobs:
     permissions:
       contents: write # create the release and upload the DMG
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Stamp version from tag
         run: |
